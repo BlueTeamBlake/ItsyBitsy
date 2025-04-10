@@ -20,8 +20,7 @@ This one’s fairly straightforward. Loading the logs with the correct time filt
 ### 🕵️ 2) What is the IP associated with the suspected user in the logs?
 
 From the initial alert, we know we're looking for traffic related to user **Browne**. Filtering the logs by `source_ip` reveals two IPs — one that appears frequently and another that stands out due to its limited use. That less frequent IP is likely our suspect machine.
-
-![Suspect IP](question2_answer.png)
+> ✅ **Answer:** 192.166.65.54
 
 ---
 
