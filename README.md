@@ -21,7 +21,7 @@ This one’s fairly straightforward. Loading the logs with the correct time filt
 
 From the initial alert, we know we're looking for traffic related to user **Browne**. Filtering the logs by `source_ip` reveals two IPs — one that appears frequently and another that stands out due to its limited use. That less frequent IP is likely our suspect machine.
 
-![Suspect IP](images/question2_answer.png)
+![Suspect IP](question2_answer.png)
 
 ---
 
@@ -31,7 +31,7 @@ After filtering logs tied to the suspected IP, I found a request with the user a
 
 > ✅ **Answer:** `bitsadmin.exe`
 
-![bitsadmin log](images/question3_answer.png)
+![bitsadmin log](question3_answer.png)
 
 ---
 
@@ -62,7 +62,7 @@ Visiting the URL reveals that the content is stored in a text-based format. The 
 > ✅ **Answer:** `yTg0Ah6a`  
 (*or `secret.txt` if it was explicitly shown in the paste content or URL*)
 
-![File Access Log](images/question5_answer.png)
+![File Access Log](question5_answer.png)
 
 ---
 
