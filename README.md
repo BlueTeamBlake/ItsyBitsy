@@ -13,13 +13,15 @@ Our goal is to analyze these network logs, identify the C2 communication, extrac
 
 This one’s fairly straightforward. Loading the logs with the correct time filter (March 2022) gives us the total number of "hits" or events returned. Just apply a filter on the `@timestamp` field and take note of the event count.
 
+![March Events](images/question1_answer.png)
 
-![Event page](images/question1_answer.png)
 ---
 
 ### 🕵️ 2) What is the IP associated with the suspected user in the logs?
 
 From the initial alert, we know we're looking for traffic related to user **Browne**. Filtering the logs by `source_ip` reveals two IPs — one that appears frequently and another that stands out due to its limited use. That less frequent IP is likely our suspect machine.
+
+![Suspect IP](images/question2_answer.png)
 
 ---
 
@@ -28,6 +30,8 @@ From the initial alert, we know we're looking for traffic related to user **Brow
 After filtering logs tied to the suspected IP, I found a request with the user agent set as `bitsadmin`. This is a legitimate Windows binary that can be abused to download files — a known LOLBin. In this case, it was used to pull content from **pastebin.com**, which is definitely suspicious.
 
 > ✅ **Answer:** `bitsadmin.exe`
+
+![bitsadmin log](images/question3_answer.png)
 
 ---
 
@@ -58,6 +62,8 @@ Visiting the URL reveals that the content is stored in a text-based format. The 
 > ✅ **Answer:** `yTg0Ah6a`  
 (*or `secret.txt` if it was explicitly shown in the paste content or URL*)
 
+![File Access Log](images/question5_answer.png)
+
 ---
 
 ### 🧩 7) The file contains a secret code with the format THM{_____}.
@@ -65,6 +71,7 @@ Visiting the URL reveals that the content is stored in a text-based format. The 
 Sure does! When we open the paste, we find the flag inside in the expected format.
 
 > ✅ **Answer:** `THM{SECRET__CODE}`
+
 
 
 
