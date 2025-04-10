@@ -13,7 +13,7 @@ Our goal is to analyze these network logs, identify the C2 communication, extrac
 
 This one’s fairly straightforward. Loading the logs with the correct time filter (March 2022) gives us the total number of "hits" or events returned. Just apply a filter on the `@timestamp` field and take note of the event count.
 
-![March Events](images/question1_answer.png)
+![Event Dashboard](images/question1_answer.png)
 
 ---
 
