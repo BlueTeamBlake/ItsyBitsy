@@ -56,10 +56,10 @@ Combine them to get the full URL:
 
 ### 📄 6) A file was accessed on the file-sharing site. What is the name of the file accessed?
 
-Visiting the URL reveals that the content is stored in a text-based format. The paste ID `yTg0Ah6a` is often considered the file name when it's pulled via automated tools like `bitsadmin`.
+Visiting the URL reveals that the content is stored in a text-based format and gives us our file name:
 
-> ✅ **Answer:** `yTg0Ah6a`  
-(*or `secret.txt` if it was explicitly shown in the paste content or URL*)
+> ✅ **Answer:** `secret.txt`  
+
 
 ![File Access Log](question5_answer.png)
 
